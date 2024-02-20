@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    private Player _player;
     private Rigidbody2D _rigidbody2D;
 
     [SerializeField] 
@@ -16,7 +15,6 @@ public class Movement : MonoBehaviour
 
     private void Awake()
     {
-        _player = GetComponent<Player>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
     void Start()

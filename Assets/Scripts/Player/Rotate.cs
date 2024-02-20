@@ -5,15 +5,17 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
-    private Vector2 mouseDirection = Vector2.zero;
     private SpriteRenderer _spriteRenderer;
+
+    private Vector2 mouseDirection = Vector2.zero;
+
     private void Awake()
     {
-        Player.OnLookEvent += Look;
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
     private void Start()
     {
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        Player.OnLookEvent += Look;
     }
     private void Look(Vector2 direction)
     {
