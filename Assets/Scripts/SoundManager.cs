@@ -19,11 +19,6 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void Start()
-    {
-
-    }
-
     // 코인이 먹힐 때 호출되는 함수
     public void PlayCoinSound(GameObject coinObject)
     {
@@ -33,5 +28,9 @@ public class SoundManager : MonoBehaviour
 
         // 코인 소리 재생이 끝날 때까지 기다리지 않고 코인을 즉시 파괴
         Destroy(coinObject);
+    }
+    public void PlaySound()
+    {
+        audioSource.PlayOneShot(coinClip);
     }
 }
