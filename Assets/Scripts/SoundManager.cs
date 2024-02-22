@@ -22,7 +22,6 @@ public class SoundManager : MonoBehaviour
     // 코인이 먹힐 때 호출되는 함수
     public void PlayCoinSound(GameObject coinObject)
     {
-        //audioSource.clip = coinClip;  
         // 코인 소리 재생
         audioSource.PlayOneShot(coinClip);
 
